@@ -324,7 +324,7 @@
 
             document.getElementById("status").innerText = "Registreret!";
             
-            const bygmaSearchUrl = `https://www.bygma.dk/soegeside/?search=${decodedText}`;
+            const bygmaSearchUrl = `https://bygma.dk{decodedText}`;
             
             document.getElementById("resultCard").style.display = "block";
             document.getElementById("prodMeta").innerText = "EAN: " + decodedText;
@@ -385,7 +385,7 @@
 
             let textContent = "Bygma Materialeliste:\n";
             keys.forEach(ean => {
-                textContent += `- ${historyObjects[ean]} stk. (EAN: ${ean}) -> https://www.bygma.dk/soegeside/?search=${ean}\n`;
+                textContent += `- ${historyObjects[ean]} stk. (EAN: ${ean}) -> https://bygma.dk{ean}\n`;
             });
 
             if (type === 'sms') {
@@ -406,7 +406,7 @@
             }
 
             keys.forEach((ean) => {
-                const url = `https://www.bygma.dk/soegeside/?search=${ean}`;
+                const url = `https://bygma.dk{ean}`;
                 const count = historyObjects[ean];
 
                 const item = document.createElement("div");
