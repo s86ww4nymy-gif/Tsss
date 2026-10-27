@@ -411,7 +411,7 @@
 
                 const item = document.createElement("div");
                 item.className = "history-item";
-                item.innerHTML = \`
+                item.innerHTML = `
                     <div class="history-info">
                         <span style="font-weight:700;">Vare</span>
                         <span class="history-ean">\${ean}</span>
@@ -425,7 +425,7 @@
                         <a href="\${url}" target="_blank" class="history-link">Åbn</a>
                         <button class="btn-delete-item" onclick="deleteItem('\${ean}')">✕</button>
                     </div>
-                \`;
+                `;
                 container.appendChild(item);
             });
         }
